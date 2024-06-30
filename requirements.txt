@@ -1,0 +1,7 @@
+aiogram==3.8.0
+aiomysql==0.2.0
+fastapi==0.111.0
+pydantic==2.7.4
+pydantic_settings==2.3.4
+SQLAlchemy==2.0.31
+uvicorn==0.30.1

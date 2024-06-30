@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <title>Cliker</title>
+</head>
+<body>
+    <main class="Container">
+        <form class="Box-container">
+
+            <div class="user-bonus-cont" id="user_bonus_cont">
+                <div class="user-bonus-window">
+                    <div class="title-bonus-cont">
+                        <img src="/static/img/gift.png" class="gift">
+                        <div class="title-text-bonus">
+                            CONGRATULATION
+                        </div>
+                    </div>
+                    <div class="bonus-text">
+                        You received 25,000 coins for being a new user.
+                    </div>
+                    <div class="accept-button" id="accept_button">
+                        CLAIM
+                    </div>
+                </div>
+            </div>
+
+            <div class="not-enough-referrals-cont" id="not_enough_referrals_cont">
+                <div class="not-enough-referrals-window" id="not_enough_window">
+                    <div class="title-text-cont">
+                        <img src="/static/img/referrals.png" alt="" class="referrals_img">
+                        <div class="not-enough-ref-title-text">
+                            NOT ENOUGH REFERRALS
+                        </div>
+                    </div>
+                    <div class="secont-text">
+                        You need to have 10 referrals to withdraw funds
+                    </div>
+                    <div class="referrals-count" id="referrals_count">
+                        You have 0/10 referrals
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-container" id="news_container">
+                <div class="news-window" id="news_window">
+                    <div class="news-title-cont">
+                        <img src="/static/img/news-cat.png" class="news-cat" alt="">
+                        <div class="news-title-text">
+                            NEWS OF THE MONTH
+                        </div>
+                    </div>
+                    <div class="news-textt">
+                        We are pleased to announce the launch of a special promotion for new users! Within the framework of this initiative, we offer a unique opportunity to get your funds easily and quickly. This promotion is designed to make our service more accessible and convenient for all new customers. In addition to fast access to your funds, you will also enjoy exclusive benefits and personalized support. Join us and take a chance to appreciate all the advantages of our offer. Don't miss this opportunity to experience the best we have to offer and become a valued member of our community.
+                    </div>
+                </div>
+            </div>
+
+            <div class="not-enough-money-cont" id="not_enough_money_cont">
+                <div class="not-enough-money-window">
+                    <div class="title-text-cont">
+                        <img src="/static/img/not_enouhg_money.png" class="not_enough_money_img" alt="">
+                        <div class="text-cont-not-enough">
+                            NOT ENOUGH MONEY
+                        </div>
+                    </div>
+                    <div class="text-about-not-enough">
+                        The minimum amount for withdrawal is 100,000 coins.
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-payment-cont" id="data_payment_cont">
+                <div class="data-payment-window">
+                    <div class="success-or-error-title-text" id="success_or_error_text">
+                        SUCCES
+                    </div>
+                    <div class="text-for-error-or-succes" id="text_for_error_or_succues">
+                        Your data has been successfully sent for processing. Wait for the funds to be credited to your card.
+                    </div>
+                </div>
+            </div>
+            <div class="payment-cont" id="payment-cont">
+                <div class="pyment-window" id="payment-window">
+                    <div class="title-cont">
+                        <img src="/static/img/Payment.png" alt="" class="img-payment">
+                        <div class="payment-title-text">
+                            PAYMENT
+                        </div>
+                    </div>
+                    <div class="main-payment-cont">
+                        <div class="front-card-box">
+                            <div class="title-text-con">
+                                <div class="name-bank">
+                                    Universal Bank
+                                </div>
+                            </div>
+                            <div class="top-card-name-text">
+                                Card Number
+                            </div>
+                            <input type="text" class="card-number" id="card_number">
+                            <div class="date-and-cvv-cont">
+                                <div class="card-datecont">
+                                    <div class="top-card-date">
+                                        Expiration Date
+                                    </div>
+                                    <input type="text" class="date" id="date">
+                                </div>
+
+                                <div class="card-cvvcont">
+                                    <div class="top-card-cvv">
+                                        CVV
+                                    </div>
+                                    <input type="text" class="cvv" id="cvv">
+                                </div>
+                            </div>
+                            <div class="payment-button-and-error-cont">
+                                <div class="payment-button-cont">
+                                    <div class="send-payment-button" id="send_payment_request">
+                                        Send Request
+                                    </div>
+                                    <input type="text" class="convert" id="convert" placeholder="COINS">
+                                    <input type="text" class="convert_sum" id="convert_sum" placeholder="USDT">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-text-cont">
+                            If you were wondering why you need to enter your data, then this information is for you. In our project we use the API of such a well-known and very popular cryptocurrency exchange as BestChange. You can go to BestChange.com and see for yourself. We do not collect your data and we are not going to use it for bad purposes!!!
+                        </div>
+                        <div class="close-payment-button" id="close-payment">
+                            CLOSE
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="referrals-cont" id="referrals-container">
+                <div class="referrals-window" id="referrals-window">
+                    <div class="ref-text-and-img-cont">
+                        <img src="/static/img/reff-img.png" alt="" class="reff-img">
+                        <div class="ref-title-text">
+                            It's your referral link
+                        </div>
+                    </div>
+                    <div class="reff-link-cont">
+                        <div class="reff-link" id="reff-link">
+                            https://t.me/catzclikerBot?start={telegram_id}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="energy-error-cont" id="energy-error-cont">
+                <div class="energy-error-window">
+                    <div class="title-text-cont">
+                        <img src="/static/img/error.png" alt="" class="error-energy">
+                        <div class="energy-first-text">
+                            NOT ENOUGH ENERGY
+                        </div>
+                    </div>
+                    <div class="energy-second-text">
+                        Your energy will be replenished in 30 minutes
+                    </div>
+                </div>
+            </div>
+            <div class="BoostContainer" id="boostContainer">
+                <div class="boost-window">
+                    <img src="/static/img/CatBoost.png" class="catboost">
+                    <div class="boostText">
+                        Dear users, we are excited to introduce a new promotion! You have a chance to win 5,000 USDT. To participate, simply tag our bot @catzclikerBot on social media and include your nickname in the comments. Each mention increases your chance of winning. Don't miss the opportunity to win. Share this news, tag our bot, and add your nickname. Good luck to all participants!
+                    </div>
+                    <div class="link-boost-button">
+                        https://t.me/catzclikerBot
+                    </div>
+                </div>
+            </div>
+            <div class="top-box">
+                <div class="boost-button" id="boostButton">
+                    <div class="rokect-cont">
+                        <img src="/static/img/rocket.png" class="rocket" alt="">
+                        <div class="boost-text">
+                            Boost
+                        </div>
+                    </div>
+                </div>
+                <div class="link-button" id="link-button-refferal">
+                    <div class="link-cont">
+                        <img src="/static/img/link.png" alt="" class="link">
+                        <div class="refferal">Referrals</div>
+                    </div>
+                </div>
+                <div class="news-button" id="news_button">
+                    <div class="news-cont">
+                        <img src="/static/img/news.png" alt="" class="news">
+                        <div class="news-text">News</div>
+                    </div>
+                </div>
+                <div class="MyMoney-button" id="payment-button">
+                    <div class="money-cont">
+                        <img src="/static/img/money.png" class="money" alt="">
+                        <div class="money-text">
+                            Payment
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="level-container">
+                <div class="level-info">
+                    <div class="level-title" id="level-title">Catzen 1</div>
+                    <div class="level-progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="coins-energy-container">
+                <div class="score-container">
+                    <img src="{{ url_for('static', path='img/dollar.png') }}" alt="monetka" class="monetka">
+                    <div class="score" id="coins">0</div>
+                </div>
+                <div class="energy-container">
+                    <img src="{{ url_for('static', path='img/light.png') }}" alt="" class="light">
+                    <div class="energy" id="energy">1500/1500</div>
+                </div>
+            </div>
+            <div class="catcoin-box">
+                <img src="{{ url_for('static', path='img/catCoin.png') }}" alt="catCoin" class="catcoin">
+            </div>
+            <div class="username-box">
+                <div class="username" id="username">
+                    @CATZCOIN
+                </div>
+            </div>
+            <div class="cont-for-bottom">
+                <div class="close-app" id="close-app">
+                    <div class="bottom-close-app">
+                        CLOSE APP
+                    </div>
+                </div>
+            </div>
+            <div id="animation-container"></div>
+        </form>
+    </main>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>
