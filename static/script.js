@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const referrals_cont = document.getElementById('referrals-container');
     const referrals_window = document.getElementById('referrals-window');
     const reff_link = document.getElementById('reff-link');
+    const notification = document.getElementById('notification');
 
     const payment_cont = document.getElementById('payment-cont');
     const close_payment = document.getElementById('close-payment');
@@ -483,7 +484,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         reff_link.addEventListener('click', () => {
             navigator.clipboard.writeText(reff_link.textContent)
                 .then(() => {
-                    alert("The link was successfully copied")
+                    notification.classList.add('show');
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 500); // Уведомление будет видно 3 секунды
                 })
                 .catch(err => {
                     console.error('Failed to copy text: ', err);
