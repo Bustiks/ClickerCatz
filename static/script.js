@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return
             }
 
-            if (start_coins < 100000) {
+            if (start_coins < 50000) {
                 not_enough_money_cont.style.visibility = 'visible';
                 not_enough_money_cont.classList.add('visible')
                 return
