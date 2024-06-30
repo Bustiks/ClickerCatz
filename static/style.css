@@ -23,7 +23,7 @@
     padding: 16px;
     position: fixed;
     z-index: 1;
-    bottom: 30px;
+    bottom: 90px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 17px;
@@ -36,11 +36,11 @@
 
 @keyframes fadein {
     from {bottom: 0; opacity: 0;} 
-    to {bottom: 70px; opacity: 1;}
+    to {bottom: 90px; opacity: 1;}
 }
 
 @keyframes fadeout {
-    from {bottom: 70px; opacity: 1;} 
+    from {bottom: 90px; opacity: 1;} 
     to {bottom: 0; opacity: 0;}
 }
 
