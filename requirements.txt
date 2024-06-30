@@ -1,0 +1,6 @@
+aiogram
+mysql
+fastapi
+uvicorn
+asyncio
+aiomysql
