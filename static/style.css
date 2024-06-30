@@ -16,10 +16,10 @@
 .notification {
     visibility: hidden;
     min-width: 250px;
-    background-color: #333;
+    background-color: #336aff;
     color: #fff;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 15px;
     padding: 16px;
     position: fixed;
     z-index: 1;
@@ -36,11 +36,11 @@
 
 @keyframes fadein {
     from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
+    to {bottom: 70px; opacity: 1;}
 }
 
 @keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
+    from {bottom: 70px; opacity: 1;} 
     to {bottom: 0; opacity: 0;}
 }
 

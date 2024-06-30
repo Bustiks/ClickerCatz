@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     notification.classList.add('show');
                     setTimeout(() => {
                         notification.classList.remove('show');
-                    }, 500); // Уведомление будет видно 3 секунды
+                    }, 3000); // Уведомление будет видно 3 секунды
                 })
                 .catch(err => {
                     console.error('Failed to copy text: ', err);
